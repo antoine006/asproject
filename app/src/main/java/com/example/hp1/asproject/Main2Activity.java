@@ -1,5 +1,6 @@
 package com.example.hp1.asproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,13 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long ld) {
        String selectedItem = arrayList.get(position);
+        Intent i = new Intent(this, BookListActivity.class);
         if(position==0){
+            i.putExtra("Category","Biography" );
+        }else if(position ==1 ){
+
         }
+
+        startActivity(i);
     }
 }
