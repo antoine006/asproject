@@ -31,6 +31,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         arrayList.add("Photography");
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,arrayList);
         ILVcountries.setAdapter(arrayAdapter);
+        ILVcountries.setOnItemClickListener(this);
     }
 
     @Override
@@ -40,9 +41,19 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         if(position==0){
             i.putExtra("Category","Biography" );
         }else if(position ==1 ){
-
+            i.putExtra("Category","Business and Finance" );
+        }else if(position==2){
+            i.putExtra("Category","Fiction" );
+        }else if(position==3){
+            i.putExtra("Category","History" );
         }
-
+       else if (position==4){
+            i.putExtra("Category","Sceince" );
+        }else if (position==5){
+            i.putExtra("Category","Sport" );
+        }else if (position==6){
+            i.putExtra("Category","Photography" );
+        }
         startActivity(i);
     }
 }
